@@ -12,3 +12,10 @@ def manhattan(array1, array2):
     for i, j in zip(array1, array2):
         sum += abs(i-j)
     return sum
+
+# Jaccard Distance
+
+def jaccard(array1, array2):
+    intersect = len(array1 & array2)
+    union = len(set(array1+array2))
+    return round(intersect/union, 2)
