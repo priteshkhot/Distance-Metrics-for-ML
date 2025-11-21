@@ -52,3 +52,11 @@ def minkowski(array1,array2, p=1):
         sum += abs((i-j)**p)
     distance = round(sum**(1/p), 2)
     return distance
+
+# Chebyshev Distance
+
+def chebyshev(array1, array2):
+    distances = []  # Distances between each corresponding point e.g (x1,y1),(x2,y2)
+    for a,b in zip(array1, array2):
+        distances.append(abs(a - b))
+    return max(distances)
