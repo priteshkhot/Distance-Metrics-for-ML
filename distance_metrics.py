@@ -19,3 +19,12 @@ def jaccard(array1, array2):
     intersect = len(array1 & array2)
     union = len(set(array1+array2))
     return round(intersect/union, 2)
+
+# Hamming Distance
+
+def hamming(array1,array2):
+    dist = 0
+    for i,j in zip(array1,array2):
+        if i == j:
+            dist += 1
+    return dist    
